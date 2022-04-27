@@ -1,4 +1,4 @@
-import { query , ensureIsUser, getCurrentUser, initThinBackend } from 'thin-backend';
+import { query , ensureIsUser, getCurrentUser, initThinBackend, logout} from 'thin-backend';
 import { useQuery, useCurrentUser } from 'thin-backend/react';
 import { useEffect, useState } from 'react';
 
@@ -9,6 +9,9 @@ function Blog({}) {
 
     return <div>
         <div>Hello {user?.email}</div>
+        <div>
+            <button onClick={logout}>logout</button>
+        </div>
     </div>
 }
 
