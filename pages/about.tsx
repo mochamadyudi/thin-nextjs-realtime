@@ -1,12 +1,19 @@
 import { query , ensureIsUser, getCurrentUser, initThinBackend, logout} from 'thin-backend';
 import { useQuery, useCurrentUser } from 'thin-backend/react';
+import { DataSubscription } from 'thin-backend';
 import { useEffect, useState } from 'react';
 
 initThinBackend({ host: process.env.NEXT_PUBLIC_BACKEND_URL });
 
 function Blog({}) {
     const user = useCurrentUser();
+    const queryBuilder = query('users').fetch();
 
+    queryBuilder.then((res)=> {
+        console.log(res)
+    })
+    // console.log(tasksSubscription)
+    // console.log()
     return <div>
         <div>Hello {user?.email}</div>
         <div>

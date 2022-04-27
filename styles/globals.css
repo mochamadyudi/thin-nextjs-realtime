@@ -1,9 +1,15 @@
+
+.font-roboto{
+  font-family: Roboto, sans-serif !important;
+}
+.font-poppins{
+  font-family: Poppins, sans-serif !important;
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /*font-family: "Roboto", sans-serif;*/
 }
 
 a {
@@ -12,9 +18,18 @@ a {
 }
 
 * {
+  font-family: Roboto, Poppins, serif;
   box-sizing: border-box;
 }
+p,a,span,button{
+  font-family: Roboto, serif;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: Poppins, serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @tailwind screens;
+
